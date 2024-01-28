@@ -1,0 +1,24 @@
+magic number replace file name
+
+Static 
+
+Pos avg
+	Make separate method to read in file make it static with 	static list
+
+Mesoinherit (43)
+
+	Threshold magic number
+	
+Letter AVG 
+
+	See pre posavg
+
+----------------------------------------------------------------------
+1.
+	Helpful to use static for information from text file; store in 	static collections. One method to rule them all and bind them.
+
+2. 
+
+	Ideally calculate average in constructor, hashmap aswell
+
+	
