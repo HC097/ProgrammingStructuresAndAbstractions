@@ -1,0 +1,12 @@
+Class are a convenient means of creating new types. One can take the various trivialities of the complex and break them down into simple abstractions. 
+
+High level data types stored in The Heap, lower levels The Stacks
+
+reference.method(parameters);
+
+String buffer auto altered, not manually. Like ArrayList vs Array.
+
+Class as contract: rules that govern the nature of the program
+
+
+

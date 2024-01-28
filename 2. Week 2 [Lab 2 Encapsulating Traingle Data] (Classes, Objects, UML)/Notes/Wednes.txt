@@ -1,0 +1,39 @@
+UML is a spacial representation that describes the defintion of classes and how they related to one another.
+
+Ex : Class called book.java ('-' = private * '+' = public)
+
+	-title: String
+	-author: String
+	-isbn: String
+-------------------------------
+	+Book(myAuthot:String, myTitle: String, myISBN: String)
+	+getTitle(): String
+	+getAuthor(): String
+	+getISBN(): String
+
+PRIVATE NOTE:
+
+	"private variables just keep those values restricted to the class for the sake of no overlap between classes, an object with parameters can be used publicly once it has its parts defined."- Justin Sharma.
+
+
+PUBLIC VS PRIVATE
+
+	public pros:
+		Easy access to all data by other classes
+		Don't have to implement getters and setters
+
+	public cons:
+		Can't protect the data from other classes - east to get into an incosistent 		state.
+		Therefore, the class cannont make any guarantees
+
+	For this class: We classes to portect themselves.
+
+Instance vs Class Data
+
+	Each object gets its own copy of instance data
+	All objects in a class share one copy of class data
+		in UML, class variables are underlined
+		in the class defintion, class variables are declared as static
+
+BEWARE: FILE HANDLING FOR LAB.
+

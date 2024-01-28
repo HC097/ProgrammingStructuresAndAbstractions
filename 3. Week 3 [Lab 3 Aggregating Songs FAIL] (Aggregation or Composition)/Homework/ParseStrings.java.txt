@@ -1,0 +1,81 @@
+import java.util.Scanner;
+import java.util.*;
+
+public class ParseStrings {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      /* Type your code here. */
+      Scanner inSS = null;
+      String lineString;
+      String firstWord = null;
+      String secondWord = null;
+      String thirdWord = null;
+      ArrayList<String> parts = new ArrayList<String>();
+      boolean inputDone;
+      inputDone = false;
+      
+      
+      
+      
+      while(!inputDone){
+
+         
+         System.out.println("Enter input string:");
+         
+         lineString = scnr.nextLine();
+         
+         if(lineString.equals("q")){
+               inputDone = true;
+               return;
+         }
+         
+         if(lineString.contains(",")){
+            
+            inSS = new Scanner(lineString); 
+            firstWord = inSS.next();
+            
+            if(firstWord.contains(",")){
+               firstWord = firstWord.replaceAll(",","ketchup");
+            }
+            
+            if(firstWord.contains("ketchup")){
+               parts = new ArrayList<String>(Arrays.asList(firstWord.split("ketchup")));
+               firstWord = parts.get(0);
+               
+               if(parts.size() > 1){
+                  secondWord = parts.get(1);
+               }else{
+                  secondWord = inSS.next();
+               }
+               
+            }else{
+               secondWord = inSS.next();
+            }
+            
+            if(secondWord.contains(",")){
+               secondWord = secondWord.replaceAll(",", "mustard");
+            } 
+            
+            if(secondWord.contains("mustard")){
+               thirdWord = inSS.next();
+               secondWord = thirdWord;
+            }
+            
+            System.out.println("First word: " + firstWord);            
+            System.out.println("Second word: " + secondWord);
+            System.out.println();
+   
+            
+            
+         }else{
+
+          System.out.println("Error: No comma in string.");
+          System.out.println();
+            
+         }
+         
+         
+      }
+      
+   }
+}

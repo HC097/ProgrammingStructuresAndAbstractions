@@ -1,0 +1,50 @@
+7.7?
+
+Realtionships Beteen Classes
+
+		So far: we have looked at class aggregation
+
+			Class A has-a instance of classB
+
+			This allows A to make use of what has already been done
+
+
+Sharing Data between Classes
+
+		Aggregation(Has- A) is one way to share data between classes
+
+			Can only use publi parts of the class
+
+			is the this a limitation of an advatage?
+
+Aggregation vs Inheritance
+
+		Aggregation: small projects with less complexity
+
+		Inheritance: large and reusable projects
+
+How does inheritance work?
+
+	new clss keyword extends
+
+		defines the inheritence relationship[
+
+		UML: arrow w/ open, open, open head 
+
+	new method/data visibility keyword
+
+		protected
+
+			This data item is visible both inside the class and to classes that 				extend this class.
+
+			Also visible to othe rclasses in the same package.
+
+			UML: #.
+
+	
+	terminology
+		
+		Subclass can be called: child class
+
+		
+			

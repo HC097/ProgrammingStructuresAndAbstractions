@@ -1,0 +1,7 @@
+Method Overloading
+
+	Using the same method name, but different parameters is common when we want to 		assume default parameters or when different types convey similar types of 		information.
+		
+		public void addValue(int val);
+		public void addValue(double val);
+
