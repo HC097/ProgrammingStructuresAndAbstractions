@@ -1,0 +1,6 @@
+Questions & Rules on the test:
+
+	10 Multiple choice
+	3 Debugger
+	
+	Have a webcam on.

@@ -1,0 +1,52 @@
+UML SYMBOLOGY
+
+	Diamond = Aggregation
+	Arrow = Inheritance
+	~Something else = Polymorphism
+
+Inheritance Can be Done Poorly
+
+	Inheritance breaks encapsulation if we use the protected keyword. There is no way 		for a parent class to make sure the consistency is maintained.
+
+	Aggregation/composition do not break encapsulation.
+
+	Protected variable not reccomended.
+
+Private vs. Protected
+
+	Everything private:
+
+		Inheritance doesn't provide the subclass itself
+		with anything it can't get through composition
+		
+		However: the "user" of a class does get to see a consistent interface 				between the super and child classes
+
+	Everything protected:
+
+		Classes become closely coupled but it is hard to maintain consistancy 				everywhere.
+
+	Stick with private!
+
+	ONE AT A TIME!
+
+Implementing Inheritance: Instance Methods and Variables
+
+	.super.methodName() to explicitly call public or protected methods in the superclass
+		For a given class, remember that there is exactly one superclass becuase 		Java doesn't
+
+Implementing Inheritance: Constructor
+
+	Constructors are not inherited
+	But: can use super() to call the superclass constructor
+		if used, it must be first statement in subsclass constructors
+		can call any of the constructors
+
+Inheritance with a has-a relationship can be done but it isn't really necessary
+
+Extension of extension (multiple levels) leads to flowing down methods.
+
+
+
+
+
+

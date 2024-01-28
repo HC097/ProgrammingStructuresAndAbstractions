@@ -1,0 +1,50 @@
+I. Excepition Handling
+
+
+	Syntax
+
+		try{
+			//some code that could throw an  exception
+		}catch (ExceptionName e){
+			//fix the problem//can use multiple for each exception
+		}finally{
+			//finish it up
+		}
+
+	Process
+
+	       https://www3.ntu.edu.sg/home/enchua/programming/java/J5a_ExceptionAssert.html
+	
+		methodA()
+	
+
+	When an exception happens it is thrown. JVM is looking for a catch block to deal 		with the exception. If you don't know what type of exception is thrown, all 			encompassing e.
+
+
+	Throwable class at top of hierarchy breaks into errors (error class) and exceptions 		(exception class)
+
+		Errors are not related to the programs. They can not be handled. Must 		stopped exectution gracefully.
+
+		Exceptions are related to the progams. They can be handled.
+
+
+	Runtime error helps distinguish between check exceptions and unchecked exceptions.
+
+
+
+	try{
+	}
+	throw e;
+	 or
+	throw new MyException("foo");
+
+
+	You might want to rethrow the original exception obect or create a new one to throw 	when you can't catch 
+
+	Better specific and segmented so you properly handle each exception.
+	
+	Finally block always gets executed regardless of whether there is an exception or not.
+
+
+
+
