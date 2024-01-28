@@ -1,0 +1,58 @@
+/* Type code here. */
+public class ContactNode{
+   //Private fields
+   private String contactName;
+   private String contactPhoneNumber;
+   private ContactNode nextNodePtr;
+   
+   //Constructor
+   public ContactNode(){
+      contactName = null;
+      contactPhoneNumber = null;
+      nextNodePtr = null;
+   }
+   
+   //Parameterized constructor. Parameters are name followed by phone number.
+   public ContactNode(String name, String number){
+      this.contactName = name;
+      this.contactPhoneNumber = number;
+   }
+   
+   //Get the name of the contact
+   public String getName(){
+      return this.contactName;
+   }
+   
+   //Get the phone number of the contact
+   public String getPhoneNumber(){
+      return this.contactPhoneNumber;
+   }
+   
+   //public member methods
+   /*Insert node after this node.
+   Before: this -- next
+   AfterL this -- node -- next
+   */
+   public void insertAfter(ContactNode nodeLoc){
+      ContactNode tmpNext;
+      
+      tmpNext = this.nextNodePtr;
+      this.nextNodePtr = nodeLoc;
+      nodeLoc.nextNodePtr = tmpNext;
+      
+   }
+   
+   //Get location pointed by nextNodePtr
+   public ContactNode getNext(){
+      return this.nextNodePtr;
+   }
+   
+   public void printContactNode(){
+      System.out.println("Name: " + this.contactName);
+      System.out.println("Phone number: " + this.contactPhoneNumber);
+   }
+   
+   
+   
+   
+}

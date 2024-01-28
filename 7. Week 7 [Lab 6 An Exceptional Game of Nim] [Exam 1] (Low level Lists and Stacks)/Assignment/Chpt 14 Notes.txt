@@ -1,0 +1,41 @@
+
+
+1.The sort() method sorts collections into ascending order provided that the elements within the collection implement the Comparable interface (i.e., the elements are also of the type Comparable).
+
+2.The Collections' sort() method calls the compareTo() method on each object within the ArrayList to determine the order and produce a sorted list.
+
+3.The sort() method can also be used to sort an ArrayList containing elements of a user-defined class type. The only requirement, however, is that the user-defined class must also implement the Comparable interface and override the compareTo() method, which should return a number that determines the ordering of the two objects being compared as shown below.
+
+4.The method compareTo() will return 0 if the two Comparable objects are equal. Otherwise, compareTo() returns a negative number if the Comparable object is less than otherComparable, or a positive number if the Comparable object is greater than otherComparable.
+
+5.Like with inheritance, an Employee object is of type Comparable<EmployeeData> as well as EmployeeData. However, an interface differs from a typical super class in that interfaces cannot be instantiated and the methods declared by an interface must be overridden and defined by the implementing class.
+
+6.sort() is a static method. Therefore, both the Collections class name and a dot should be appended before the method call, as in Collections.sort(prevEmployees).
+
+7.An interface provides method declarations, which only consist of the method's return type, name, and parameters.
+
+8.A class can both extend a class and implement an interface.
+
+-----
+
+9.Writing and maintaining redundant methods that only differ by data type can be time-consuming and error-prone. The language supports a better approach. -> Generic Method.
+
+10.Type bounds are specified using the extends keyword and appear after the corresponding type parameter. For example, the code <TheType extends Comparable<TheType>> specifies that TheType is bounded by the type bound Comparable<TheType>. Thus, TheType may only represent types that implement the Comparable interface. If the type bound is a class type (e.g., the Number class), the type parameter may only represent types that are of the type specified by the type bound or any derived classes.
+
+11.Type bounds are also necessary to enable access to the class members of the class specified by the type bound (e.g., compareTo()) via a variable of a generic type (e.g., item1, item2, item3, and min). By bounding TheType to the Comparable interface, the programmer is able to invoke the Comparable interface's compareTo() method with the generic types, as in item2.compareTo(min);. Attempting to invoke a class member via a generic type without specifying the appropriate type bound results in a compiler error.
+
+12.Importantly, type arguments cannot be primitive types such as int, char, and double. Instead, the type arguments must be reference types.  If primitive types are desired, a programmer should use the corresponding primitive wrapper classes (e.g., Integer, Character, Double, etc.), discussed elsewhere.
+
+13.For the earlier TripleMin generic method, what happens if a call is TripleMin(i, j, z), where i and j are Integers, but z is a String? Compiler error will be generated: TheType is just one type. The compiler doesn't know how to generate a method for two Integers and a String.
+
+-----
+
+14.Writing and maintaining redundant classes that only differ by data type can be time-consuming and error-prone. The language supports a better approach: a generic class is a class definition having a special type parameter that may be used in place of types in the class.
+
+15.An object of this class can be instantiated by appending after the class name a specific type in angle brackets (highlighted orange), such as TripleItem<Short> triShorts = new TripleItem<Short>((short)99, (short)55, (short)66);.
+
+16.By bounding the generic class's type parameter to the Comparable interface, a programmer can invoke the Comparable interface's compareTo() method with the generic types, as in item2.compareTo(min).
+
+17.A generic class may have multiple type parameters, separated by commas. Additionally, each type parameter may have type bounds.
+
+18.

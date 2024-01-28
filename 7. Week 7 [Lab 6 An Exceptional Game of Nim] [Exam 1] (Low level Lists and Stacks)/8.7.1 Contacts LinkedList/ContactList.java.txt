@@ -1,0 +1,72 @@
+import java.util.Scanner;
+
+public class ContactList {
+   
+   
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      /* Type your code here. */
+      ContactNode firstObj;//Create ContactNode reference variables
+      ContactNode secondObj;
+      ContactNode thirdObj;
+      ContactNode currObj;
+     
+     //String holder variables 
+      String firstName;
+      String firstNum;
+      
+      String secondName;
+      String secondNum;
+      
+      String thirdName;
+      String thirdNum;
+      
+      
+      
+      //Prompt one
+      System.out.println("Person 1");
+      System.out.println("Enter name:");
+      firstName = scnr.nextLine();
+      System.out.println("Enter phone number:");
+      firstNum = scnr.nextLine();
+      System.out.println("You entered: " + firstName + ", " + firstNum);
+      System.out.println();
+      
+      //Prompt two
+      System.out.println("Person 2");
+      System.out.println("Enter name:");
+      secondName = scnr.nextLine();
+      System.out.println("Enter phone number:");
+      secondNum = scnr.nextLine();
+      System.out.println("You entered: " + secondName + ", " + secondNum);
+      System.out.println();
+      
+      //Prompt three
+      System.out.println("Person 3");
+      System.out.println("Enter name:");
+      thirdName = scnr.nextLine();
+      System.out.println("Enter phone number:");
+      thirdNum = scnr.nextLine();
+      System.out.println("You entered: " + thirdName + ", " + thirdNum);
+      System.out.println();
+      
+      
+      //Nodes list
+      firstObj = new ContactNode(firstName, firstNum);
+      secondObj = new ContactNode(secondName, secondNum);
+      firstObj.insertAfter(secondObj);
+      thirdObj = new ContactNode(thirdName, thirdNum);
+      secondObj.insertAfter(thirdObj);
+  
+      //Print linked list
+      System.out.println("CONTACT LIST");
+      currObj = firstObj;
+      while (currObj != null){
+         currObj.printContactNode();
+         currObj = currObj.getNext();
+         System.out.println();
+      }
+      
+      
+   }
+}
